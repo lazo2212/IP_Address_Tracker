@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+/*
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+// Colors
+$very-dark-gray: hsl(0, 0%, 17%);
+$dark-gray: hsl(0, 0%, 59%);
+
+// Typography
+$font-size: 18px; // text input
+
+// Font
+$font-family: 'Rubik', sans-serif;
+$weight4: 400;
+$weight5: 500;
+$weight7: 700;
+
+$border-radius: 15px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+header {
+  background-image: url('/assets/images/pattern-bg-mobile.png');
+  background-size: cover;
+  width: 100vw;
+  height: 250px;
+
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    color: #fff;
+    margin: 20px;
+    font-size: 1.6rem;
+    font-weight: $weight7;
+  }
+
+  #input-field {
+    margin-right: -5px;
+    width: 280px;
+    height: 50px;
+    padding: 10px 20px;
+    border: 0 solid;
+    border-radius: $border-radius 0 0 $border-radius;
+    outline: none;
+    font-size: $font-size;
+
+    cursor: pointer;
+  }
+
+  #submitBtn {
+    background-color: #000;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 0 solid;
+    border-radius: 0 $border-radius $border-radius 0;
+
+    cursor: pointer;
+
+    &::after {
+      content: url('/assets/images/icon-arrow.svg');
+    }
+
+    &:hover {
+      background-color: $dark-gray;
+    }
+  }
+}
+
+.data-container {
+  position: relative;
+
+  width: 330px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: $border-radius;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+
+  h3 {
+    color: $dark-gray;
+    font-size: 0.6rem;
+    font-weight: $weight4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: $weight5;
+  }
+}

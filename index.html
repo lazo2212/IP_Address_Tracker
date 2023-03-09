@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+  </head>
+  <body>
+    <header id="header">
+      <h1>IP Address Tracker</h1>
+      <section class="input-container">
+        <input
+          id="input-field"
+          type="text"
+          placeholder="Search for any IP address or domain"
+        />
+        <button type="submit" id="submitBtn"></button>
+      </section>
+      <section class="data-container">
+        <div class="container">
+          <h3>IP Address</h3>
+          <p id="ip-adress">192.212.174.101</p>
+        </div>
+        <div class="container">
+          <h3>Location</h3>
+          <p id="location">Brooklyn, NY 10001</p>
+        </div>
+        <div class="container">
+          <h3>Timezone</h3>
+          <p id="timezone">UTC-05:00</p>
+        </div>
+        <div class="container">
+          <!-- add offset value dynamically using the API -->
+          <h3>ISP</h3>
+          <p id="isp">SpaceX Starlink</p>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- MAP -->
+    </main>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
