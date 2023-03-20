@@ -14,9 +14,10 @@ body {
   font-size: 18px;
 }
 
-header {
+#header {
   background-image: url("/assets/images/pattern-bg-mobile.png");
   background-size: cover;
+  height: 35%;
   width: 100vw;
   height: 250px;
   position: absolute;
@@ -24,13 +25,13 @@ header {
   flex-direction: column;
   align-items: center;
 }
-header h1 {
+#header h1 {
   color: #fff;
   margin: 20px;
   font-size: 1.6rem;
   font-weight: 700;
 }
-header #input-field {
+#header #input-field {
   margin-right: -5px;
   width: 280px;
   height: 50px;
@@ -41,7 +42,7 @@ header #input-field {
   font-size: 18px;
   cursor: pointer;
 }
-header #submitBtn {
+#header #submitBtn {
   background-color: #000;
   color: #fff;
   width: 50px;
@@ -51,10 +52,10 @@ header #submitBtn {
   border-radius: 0 15px 15px 0;
   cursor: pointer;
 }
-header #submitBtn::after {
+#header #submitBtn::after {
   content: url("/assets/images/icon-arrow.svg");
 }
-header #submitBtn:hover {
+#header #submitBtn:hover {
   background-color: hsl(0, 0%, 59%);
 }
 
@@ -64,6 +65,8 @@ header #submitBtn:hover {
   margin: 20px;
   background-color: #fff;
   border-radius: 15px;
+  padding: 10px;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,4 +91,16 @@ header #submitBtn:hover {
 .container p {
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+#map {
+  top: 35%;
+  position: absolute;
+  height: 65%;
+  width: 100vw;
+  z-index: 1;
+}
+
+#location {
+  text-align: center;
 }

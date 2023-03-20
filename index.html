@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
     <link
       rel="icon"
@@ -12,6 +15,21 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Include Leaflet CSS file -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <!-- Include Leaflet JavaScript file -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <!-- IP Geolocation API using JQuery SDK -->
+    <script src="https://cdn.ipwhois.io/js/ipwho.is.js"></script>
 
     <title>Frontend Mentor | IP Address Tracker</title>
   </head>
@@ -29,24 +47,24 @@
       <section class="data-container">
         <div class="container">
           <h3>IP Address</h3>
-          <p id="ip-adress">192.212.174.101</p>
+          <p id="ip-adress"></p>
         </div>
         <div class="container">
           <h3>Location</h3>
-          <p id="location">Brooklyn, NY 10001</p>
+          <p id="location"></p>
         </div>
         <div class="container">
           <h3>Timezone</h3>
-          <p id="timezone">UTC-05:00</p>
+          <p id="timezone"></p>
         </div>
         <div class="container">
           <!-- add offset value dynamically using the API -->
           <h3>ISP</h3>
-          <p id="isp">SpaceX Starlink</p>
+          <p id="isp"></p>
         </div>
       </section>
     </header>
-    <main>
+    <main id="map">
       <!-- MAP -->
     </main>
 
