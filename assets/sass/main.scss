@@ -28,10 +28,10 @@ $border-radius: 15px;
 body {
   font-family: $font-family;
   font-size: $font-size;
-  // overflow: hidden;
+  overflow: hidden;
 }
 
-#header {
+.header {
   background-image: url('/assets/images/pattern-bg-mobile.png');
   background-size: cover;
   height: 35%;
@@ -51,36 +51,43 @@ body {
     font-weight: $weight7;
   }
 
-  #input-field {
-    margin-right: -5px;
-    width: 280px;
+  .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 50px;
-    padding: 10px 20px;
-    border: 0 solid;
-    border-radius: $border-radius 0 0 $border-radius;
-    outline: none;
-    font-size: $font-size;
 
-    cursor: pointer;
-  }
+    .input-field {
+      margin-right: -5px;
+      width: 280px;
+      height: inherit;
+      padding: 10px 20px;
+      border: 0 solid;
+      border-radius: $border-radius 0 0 $border-radius;
+      outline: none;
+      font-size: $font-size;
 
-  #submitBtn {
-    background-color: #000;
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    border: 0 solid;
-    border-radius: 0 $border-radius $border-radius 0;
-
-    cursor: pointer;
-
-    &::after {
-      content: url('/assets/images/icon-arrow.svg');
+      cursor: pointer;
     }
 
-    &:hover {
-      background-color: $dark-gray;
+    #submitBtn {
+      background-color: #000;
+      color: #fff;
+      width: 50px;
+      height: inherit;
+      padding: 10px;
+      border: 0 solid;
+      border-radius: 0 $border-radius $border-radius 0;
+
+      cursor: pointer;
+
+      &::after {
+        content: url('/assets/images/icon-arrow.svg');
+      }
+
+      &:hover {
+        background-color: $dark-gray;
+      }
     }
   }
 }
@@ -133,4 +140,39 @@ body {
 
 #location {
   text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .header {
+    .input-container {
+      width: 80%;
+      .input-field {
+        width: 80%;
+      }
+    }
+
+    .data-container {
+      width: 80%;
+
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .container {
+      padding: 20px;
+      // border-right: 1px solid $very-dark-gray;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .header {
+    .input-container {
+      width: 800px;
+      .input-field {
+        width: 80%;
+      }
+    }
+  }
 }

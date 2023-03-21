@@ -37,8 +37,12 @@ populateContainer();
 const mapOptions = {
   zoomControl: false,
 };
+const markerIcon = L.icon({
+  iconUrl: 'assets/images/icon-location.svg',
+  iconSize: [40, 50],
+});
 const map = L.map('map', mapOptions).setView([51.505, -0.09], 13);
-const marker = L.marker([51.5, -0.09]).addTo(map);
+const marker = L.marker([51.5, -0.09], { icon: markerIcon }).addTo(map);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
