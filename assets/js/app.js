@@ -19,11 +19,14 @@ const geoLocation = async (ip = '') => {
 // FUNCTIONS
 const populateContainer = (ip = '') => {
   geoLocation(ip).then((data) => {
-    console.log(data);
     ipAdressText.textContent = data.ip;
     locationText.textContent = `${data.location.region}, ${data.location.city} ${data.location.postalCode}`;
     timezoneText.textContent = `UTC ${data.location.timezone}`;
     ispText.textContent = data.isp;
+
+    let newLatLng = new L.LatLng(data.location.lat, data.location.lng);
+    map.setView(newLatLng);
+    marker.setLatLng(newLatLng);
   });
 };
 
@@ -39,7 +42,6 @@ const marker = L.marker([51.5, -0.09]).addTo(map);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
-  attributionControl: false,
   attribution:
     '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
@@ -48,5 +50,3 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 submitBtn.addEventListener('click', () => {
   populateContainer(inputField.value);
 });
-
-// kada upišem drugu IP adresu da se marker generira na toj lokaciji
