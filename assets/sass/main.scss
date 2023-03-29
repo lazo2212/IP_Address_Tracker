@@ -32,7 +32,7 @@ body {
 }
 
 .header {
-  background-image: url('/assets/images/pattern-bg-mobile.png');
+  background-image: url('../images/pattern-bg-mobile.png');
   background-size: cover;
   height: 35%;
   width: 100vw;
@@ -82,7 +82,7 @@ body {
       cursor: pointer;
 
       &::after {
-        content: url('/assets/images/icon-arrow.svg');
+        content: url('../images/icon-arrow.svg');
       }
 
       &:hover {
@@ -144,7 +144,7 @@ body {
 
 @media only screen and (min-width: 760px) {
   .header {
-    background-image: url('/assets/images/pattern-bg-desktop.png');
+    background-image: url('../images/pattern-bg-desktop.png');
 
     .input-container {
       width: 60%;
