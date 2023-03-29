@@ -69,4 +69,4 @@ An example of fetch data:
 - LinkedIN - [Robert Lazić](https://www.linkedin.com/in/robert-lazi%C4%87/)
 - GitHub - [Robert Lazić](https://github.com/lazo2212)
 - Frontend Mentor - [Robert](https://www.frontendmentor.io/profile/lazo2212)
-- email - [robert.lazicpz@gmail.com](robert.lazicpz@gmail.com)
+- email - [robert.lazicpz@gmail.com](mailto:robert.lazicpz@gmail.com)
