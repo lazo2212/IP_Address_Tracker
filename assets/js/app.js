@@ -38,7 +38,7 @@ const mapOptions = {
   zoomControl: false,
 };
 const markerIcon = L.icon({
-  iconUrl: 'assets/images/icon-location.svg',
+  iconUrl: './assets/images/icon-location.svg',
   iconSize: [40, 50],
 });
 const map = L.map('map', mapOptions).setView([51.505, -0.09], 13);
